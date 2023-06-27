@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>School timetable</title>
+    <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 2px solid rgb(200,200,200);
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    td, th {
+      border: 1px solid rgb(190,190,190);
+      padding: 10px 20px;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    caption {
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>School timetable</h1>
+
+    <table>
+      <caption>
+        Languages teacher's schedule
+      </caption>
+      <!-- <summary> is deprecated -->
+      <colgroup>
+        <col>
+        <col>
+        <col style="background-color:#97DB9A">
+        <col style="width: 42px">
+        <col style="background-color:#97DB9A">
+        <col style="background-color:#DCC48E; border:4px solid #C1437A;">
+        <col style="width: 42px">
+      </colgroup>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      <tr>
+        <th>1st period</th>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>2nd period</th>
+        <td>English</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>3rd period</th>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>4th period</th>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Other spending record</h1>
+    <table>
+        <thead>
+            <tr>
+              <th id="purchase">Purchase</th>
+              <!-- id and headers attributes - are alternatives to using the scope attribute to create associations between headers and cells -->
+              <th id="location">Location</th>
+              <!-- add a unique id to each <th> element -->
+              <th id="date">Date</th>
+              <th id="evaluation">Evaluation</th>
+              <th id="cost">Cost (€)</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <!-- <tfoot> - footer that must wrap the part of the table that is the footer, usually the final row with items in the previous rows summed -->
+              <tr>
+                <th colspan="4" id="sum">SUM</th>
+                <td headers="sum cost">118</td>
+              </tr>
+            </tfoot>
+          <tbody>
+            <tr>
+              <th id="haircut">Haircut</th>
+              <td headers="location haircut">Hairdresser</td>
+              <!-- add a headers attribute to each <td> element 
+                   each headers attribute has to contain a list of the ids of the all the <th> that act as a header for that cell, separated by spaces-->
+              <!-- the scope approach is usually enough for most tables -->
+              <td headers="date haircut">12/09</td>
+              <td headers="evaluation haircut">Great idea</td>
+              <td headers="cost haircut">30</td>
+            </tr>
+            <tr>
+              <th id="lasagna">Lasagna</td>
+              <td headers="location lasagna">Restaurant</td>
+              <td headers="date lasagna">12/09</td>
+              <td headers="evaluation lasagna">Regrets</td>
+              <td headers="cost lasagna">18</td>
+            </tr>
+            <tr>
+              <th id="shoes">Shoes</th>
+              <td headers="location shoes">Shoeshop</td>
+              <td headers="date shoes">13/09</td>
+              <td headers="evaluation shoes">Big regrets</td>
+              <td headers="cost shoes">65</td>
+            </tr>
+            <tr>
+              <th id="toothpaste">Toothpaste</th>
+              <td headers="location toothpaste">Supermarket</td>
+              <td headers="date toothpaste">13/09</td>
+              <td headers="evaluation toothpaste">Good</td>
+              <td headers="cost toothpaste">5</td>
+            </tr>
+          </tbody>
+    </table>
+  </body>
+</html>
